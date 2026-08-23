@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Didi ❤️</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <audio id="engMusic">
+    <source src="music/eng song.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="cakeMusic">
+    <source src="music/bday song.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="finalMusic">
+    <source src="music/hindi song.mp3" type="audio/mpeg">
+</audio>
+    <section class="hero">
+      <img src="images/photo1.jpg" alt="Didi" class="hero-img" />
+
+      <h1>Happy Birthday Didi ❤️</h1>
+
+      <p>A little surprise made with lots of love ✨</p>
+
+      <button onclick="startJourney()">
+    Start The Journey ❤️
+</button>
+    </section>
+    <section id="message1" class="message-section">
+      <img src="images/photo2.jpg" alt="Didi Photo" class="message-img" />
+
+      <h2>For My Didi 🌸</h2>
+
+      <div class="message-box">
+        To my dearest Didi ❤️ Thank you for always being there for me through
+        every happy moment, every difficult day, and every silly little problem.
+        You've always supported me, guided me, and believed in me even when I
+        doubted myself. I may not say it often, but I am truly lucky to have you
+        as my sister. Happy Birthday, Didi 🌸✨
+      </div>
+    </section>
+    <section class="message-section">
+      <h2>Things I Want To Say ❤️</h2>
+
+      <img src="images/photo3.jpg" class="message-img" />
+
+      <div class="message-box">
+        No matter how much we fight, tease each other, or annoy each other,
+        you'll always be one of my favourite people in the world. ❤️ Thank you
+        for being my sister, my supporter, my teacher, and sometimes my partner
+        in crime. Life would honestly be so boring without you.
+      </div>
+    </section>
+    <section class="message-section">
+      <h2>Why You're So Special ✨</h2>
+
+      <img src="images/photo 4.jpg" class="message-img" />
+      <img src="images/photo5.jpg" class="message-img" />
+      <img src="images/photo6.jpg" class="message-img" />
+
+      <div class="message-box">
+        <ul>
+          <li>You always care for everyone around you ❤️</li>
+          <li>You make even ordinary days fun 🌸</li>
+          <li>You never give up when things get difficult ✨</li>
+          <li>You inspire me more than you know 🌷</li>
+        </ul>
+      </div>
+    </section>
+    <section class="message-section">
+      <h2>Our Buri Buri Moments 😂</h2>
+      <button onclick="playBirthdaySong()">
+    Play Our Song 💖
+</button>
+
+      <img src="images/photo11.jpg" class="message-img" />
+      <img src="images/photo15.jpg" class="message-img" />
+      <img src="images/photo17.jpg" class="message-img" />
+
+      <div class="message-box">
+        Remember all our random fights? The times we laughed so hard we couldn't
+        breathe? The endless teasing, inside jokes, and all the silly moments
+        that only we understand? Those are some of my favourite memories. 😂❤️
+      </div>
+    </section>
+    <section class="message-section">
+      <h2>Dear Unnie 🌸</h2>
+
+      <img src="images/photo7.jpg" class="message-img" />
+      <img src="images/photo8.jpg" class="message-img" />
+      <img src="images/photo9.jpg" class="message-img" />
+
+      <div class="message-box">
+        Dear Unnie, I hope this year brings you happiness, success, good health
+        and everything you've wished for. You deserve every beautiful thing life
+        has to offer. Thank you for always being there for me. Love you forever.
+        ❤️
+      </div>
+    </section>
+    <section class="message-section">
+      <h2>Birthday Cake Time 🎂</h2>
+
+      <div id="cake" class="cake">🎂</div>
+
+      <button onclick="cutCake()">Cut The Cake 🎂</button>
+      <div id="cakeMessage" class="hidden-message">
+
+    <img src="images/photo10.jpg" class="message-img" />
+
+    <h3>Happy Birthday Didi ❤️</h3>
+
+    <img
+    src="images/photo12.jpg"
+    alt="Surprise Photo"
+    class="surprise-photo"
+    />
+
+    <p>
+    Happy Birthday Didi ❤️
+    I hope this year brings you happiness,
+    success, laughter and lots of beautiful memories.
+    ✨🎂🌸
+    </p>
+
+</div>
+    <section class="message-section">
+    <h2>One Last Thing... 🎁</h2>
+
+    <button onclick="showMessage()">Click Me Didi ❤️</button>
+
+    <div
+        id="finalMessage"
+        style="display:none; margin-top:20px"
+        class="message-box"
+    >
+
+        <img src="images/photo13.jpg" class="message-img" />
+        <img src="images/photo14.jpg" class="message-img" />
+        <img src="images/photo16.jpg" class="message-img" />
+
+        <p>
+            Forever my Didi,
+Forever my best friend,
+Forever my safe place. ❤️
+
+Happy Birthday.
+<br><br>
+
+            No matter where life takes us, you'll always be my favourite
+            person to annoy. Thank you for every memory, every lesson,
+            every laugh, and every moment. Love you endlessly. 💖
+
+            <br><br>
+            – Dakyy 🌸✨
+        </p>
+
+    </div>
+</section>
+
+    <script>
+     const bgMusic = document.getElementById("engMusic");
+const birthdayMusic = document.getElementById("cakeMusic");
+const finalMusic = document.getElementById("finalMusic");
+ function showMessage() {
+
+    document.getElementById("finalMessage").style.display = "block";
+
+    stopAllMusic();
+
+    document.getElementById("finalMusic").play();
+}
+      
+
+      function cutCake() {
+    document.getElementById("cake").classList.add("cake-cut");
+
+    document.getElementById("cakeMessage").style.display = "block";
+
+    createConfetti();
+}
+      function playBirthdaySong() {
+    document.getElementById("engMusic").pause();
+
+    document.getElementById("cakeMusic").currentTime = 0;
+    document.getElementById("cakeMusic").play();
+}
+
+      function createConfetti() {
+        for (let i = 0; i < 50; i++) {
+          const confetti = document.createElement("div");
+
+          confetti.classList.add("confetti");
+
+          confetti.style.left = Math.random() * 100 + "vw";
+
+          confetti.style.animationDuration = Math.random() * 3 + 2 + "s";
+
+          document.body.appendChild(confetti);
+
+          setTimeout(() => {
+            confetti.remove();
+          }, 5000);
+        }
+      }
+
+      setInterval(() => {
+        const heart = document.createElement("div");
+
+        heart.classList.add("heart");
+
+        heart.innerHTML = "💖";
+
+        heart.style.left = Math.random() * 100 + "vw";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, 6000);
+      }, 1000);
+      const sections = document.querySelectorAll(".message-section");
+
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
+
+sections.forEach(section => {
+  observer.observe(section);
+});
+function stopAllMusic() {
+    document.getElementById("engMusic").pause();
+    document.getElementById("cakeMusic").pause();
+    document.getElementById("finalMusic").pause();
+
+    document.getElementById("engMusic").currentTime = 0;
+    document.getElementById("cakeMusic").currentTime = 0;
+    document.getElementById("finalMusic").currentTime = 0;
+}
+
+function startJourney() {
+    stopAllMusic();
+    document.getElementById("engMusic").play();
+}
+    </script>
+  </body>
+</html>
